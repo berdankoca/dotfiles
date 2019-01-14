@@ -1,0 +1,33 @@
+#!/bin/sh
+
+alias dk='docker'
+
+dkln() {
+	docker logs -f `docker ps | grep $1 | awk '{print $1}'`
+}
+
+dkclean() {
+	docker rm $(docker ps -aq -f status=exited)
+	docker volume rm $(docker volume ls -qf dangling=true)
+}
+
+dktop() {
+	docker stats --format "table {{.Container}}\t{{.Name}}\t{{.CPUPerc}}  {{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}"
+}
+
+dkstats() {
+	if [ $# -eq 0 ]
+		then docker stats --no-stream;
+		else docker stats --no-stream | grep $1;
+	fi
+}
+
+dke() {
+	docker exec -it $1 /bin/bash
+}
+
+dkexe() {
+	docker exec -it $1 $2
+}
+
+
