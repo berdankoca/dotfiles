@@ -111,3 +111,5 @@ export PASSWORD_STORE_DIR=/c/pass-store
 if [ -f ~/dotfiles/docker/.docker_aliases ]; then
 	. ~/dotfiles/docker/.docker_aliases
 fi
+
+#exec tmux
