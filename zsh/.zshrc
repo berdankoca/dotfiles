@@ -112,4 +112,9 @@ if [ -f ~/dotfiles/docker/.docker_aliases ]; then
 	. ~/dotfiles/docker/.docker_aliases
 fi
 
-#exec tmux
+export NVM_DIR="/home/berdan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+#if command -v tmux > /dev/null; then
+#	[ -z $TMUX ] && exec tmux
+#fi 
