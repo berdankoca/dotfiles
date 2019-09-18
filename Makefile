@@ -17,7 +17,7 @@ install:
 	sudo apt-get update -y
 
 	@echo "========== install package =========="
-	sudo apt-get install -y jq curl htop httpie pass psmisc vim zsh tmux
+	sudo apt-get install -y jq curl htop httpie pass psmisc awk grep vim zsh tmux yarn
 	
 	@echo "========== install oh-my-zsh and plugins =========="
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -41,7 +41,12 @@ install:
 	curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ${HOME}/.dircolors
 	
 	#docker-ce docker-compose?
-	#if you use wsl, be carefull about docker version of local computer	
+	#if you use wsl, be carefull about docker version of local computer
+
+	@echo "========== install ctop =========="
+	sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.2/ctop-0.7.2-linux-amd64 -O /usr/local/bin/ctop
+	sudo chmod +x /usr/local/bin/ctop
+	
 	@echo "========== enf of install =========="
 
 #Change config with dotfiles
