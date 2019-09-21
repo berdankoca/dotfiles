@@ -17,7 +17,7 @@ install:
 	sudo apt-get update -y
 
 	@echo "========== install package =========="
-	sudo apt-get install -y jq curl htop httpie pass psmisc awk grep vim zsh tmux yarn
+	sudo apt-get install -y jq curl htop httpie pass psmisc grep vim zsh tmux yarn
 	
 	@echo "========== install oh-my-zsh and plugins =========="
 	sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
