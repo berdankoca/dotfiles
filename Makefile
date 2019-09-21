@@ -20,25 +20,22 @@ install:
 	sudo apt-get install -y jq curl htop httpie pass psmisc awk grep vim zsh tmux yarn
 	
 	@echo "========== install oh-my-zsh and plugins =========="
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting	
+	sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting	
 
 	#When launch tmux press pefix + I (capital i) to fetch plugins
 	@echo "========== install tmux/tpm =========="
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm	
+	sudo git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm	
 
 	@echo "========== install docker/dive =========="
-	wget https://github.com/wagoodman/dive/releases/download/v0.6.0/dive_0.6.0_linux_amd64.deb
+	sudo wget https://github.com/wagoodman/dive/releases/download/v0.6.0/dive_0.6.0_linux_amd64.deb
 	sudo apt install ./dive_0.6.0_linux_amd64.deb
-	rm ./dive_0.6.0_linux_amd64.deb
+	sudo rm ./dive_0.6.0_linux_amd64.deb
 
 	@echo "========== install nvm and node =========="
-	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-	nvm install node
-
-	@echo "========== install dircolors =========="
-	curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ${HOME}/.dircolors
+	sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+	#sudo nvm install node
 	
 	#docker-ce docker-compose?
 	#if you use wsl, be carefull about docker version of local computer
