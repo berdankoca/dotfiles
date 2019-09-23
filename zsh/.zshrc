@@ -113,6 +113,10 @@ if [ -f ~/dotfiles/docker/.docker_aliases ]; then
 	. ~/dotfiles/docker/.docker_aliases
 fi
 
+cheat() {
+	curl cheat.sh/{$1}
+}
+
 export NVM_DIR="/home/berdan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 

@@ -51,7 +51,7 @@ deploy: install backup
 	@echo "========== change the config file =========="
 	@echo "source ${HOME}/dotfiles/bash/.bashrc" > ${HOME}/.bashrc
 	@echo "source ${HOME}/dotfiles/zsh/.zshrc" > ${HOME}/.zshrc
-	@echo "source ${HOME}/dotfiles/vim/vimrc.vm" > ${HOME}/.vimrc
+	@echo "source ${HOME}/dotfiles/vim/vimrc.vim" > ${HOME}/.vimrc
 	@echo "source ${HOME}/dotfiles/tmux/.tmux.conf" > ${HOME}/.tmux.conf
 	@echo "========== enf of config file ========="
 
