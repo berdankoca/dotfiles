@@ -33,6 +33,9 @@ install:
 	sudo apt install ./dive_0.6.0_linux_amd64.deb
 	sudo rm ./dive_0.6.0_linux_amd64.deb
 
+	@echo "========== install lazydocker =========="
+	sudo curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
 	@echo "========== install nvm and node =========="
 	sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 	#sudo nvm install node
