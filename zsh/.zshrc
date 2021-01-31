@@ -106,7 +106,7 @@ alias dotnet='dotnet.exe'
 #alias git='git.exe'
 #alias dive='dive.exe'
 
-export DOCKER_HOST=tcp://localhost:2375
+#export DOCKER_HOST=tcp://localhost:2375
 export PASSWORD_STORE_DIR=/c/pass-store
 
 if [ -f ~/dotfiles/docker/.docker_aliases ]; then
