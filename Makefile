@@ -20,13 +20,13 @@ install:
 	sudo apt-get install -y jq curl htop httpie pass psmisc grep vim zsh tmux yarn
 	
 	@echo "========== install oh-my-zsh and plugins =========="
-	sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting	
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting	
 
 	#When launch tmux press pefix + I (capital i) to fetch plugins
 	@echo "========== install tmux/tpm =========="
-	sudo git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm	
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm	
 
 	@echo "========== install docker/dive =========="
 	sudo wget https://github.com/wagoodman/dive/releases/download/v0.6.0/dive_0.6.0_linux_amd64.deb
